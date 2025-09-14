@@ -8,7 +8,13 @@ const MovieList = ({ title, movies }) => {
       <div className="flex overflow-x-scroll space-x-4 hide-scrollbar">
         <div className="flex">
           {movies?.map((Movie) => {
-            return <MovieCard posterPath={Movie.poster_path} />;
+            console.log(movies);
+            return (
+              <MovieCard
+                posterPath={Movie.poster_path}
+                title={Movie.original_title}
+              />
+            );
           })}
         </div>
       </div>
